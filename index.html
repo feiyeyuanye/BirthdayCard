@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+		</script>
+		<style type="text/css">
+			* {
+				padding: 0px;
+				margin: 0px;
+			}
+			
+			.one {
+				width: 100%;
+				height: auto;
+				background: url(img/one.jpg) no-repeat;
+				position: absolute;
+				z-index: 1;
+			}
+			
+			.two {
+				width: 100%;
+				height: auto;
+				background: url(img/two.jpg) no-repeat;
+				position: absolute;
+				z-index: 2;
+			}
+			
+			.three {
+				width: 100%;
+				height: auto;
+				background: url(img/fif.jpg) no-repeat;
+				position: absolute;
+				z-index: 2;
+			}
+			
+			.four {
+				width: 100%;
+				height: auto;
+				background: url(img/six.jpg) no-repeat;
+				position: absolute;
+				z-index: 2;
+			}
+			
+			.fif {
+				width: 100%;
+				height: auto;
+				background: url(img/four.jpg) no-repeat;
+				position: absolute;
+				z-index: 2;
+			}
+			
+			.six {
+				width: 100%;
+				height: auto;
+				background: url(img/tidai.jpg) no-repeat;
+				position: absolute;
+				z-index: 2;
+			}
+			
+			#audio {
+				margin: 10px;
+				position: absolute;
+				z-index: 10;
+			}
+			
+			@keyframes CDturn {
+				from {
+					transform: rotate(0deg);
+				}
+				to {
+					transform: rotate(360deg);
+				}
+			}
+			
+			.love {
+				width: 100px;
+				height: 120px;
+				position: absolute;
+				z-index: 3;
+			}
+			
+			.love1 {
+				right: 10px;
+				top: 50px;
+				background: url(img/tidai.jpg) no-repeat;
+				background-size: 100px 120px;
+				transform: rotate(-15deg);
+			}
+			
+			.love2 {
+				left: 10px;
+				top: 330px;
+				background: url(img/tidai.jpg) no-repeat;
+				background-size: 100px 120px;
+				transform: rotate(-15deg);
+			}
+			
+			.love3 {
+				right: 10px;
+				top: 350px;
+				background: url(img/tidai.jpg) no-repeat;
+				background-size: 100px 120px;
+				transform: rotate(15deg);
+			}
+			
+			.thrLove1 {
+				left: 30px;
+				top: 30px;
+				background: url(img/tidai.jpg) no-repeat;
+				background-size: 100px 120px;
+				transform: rotate(15deg);
+			}
+			
+			.thrLove2 {
+				width: 150px;
+				left: 35px;
+				bottom: 30px;
+				background: url(img/tidai.jpg) no-repeat;
+				background-size: 150px 120px;
+				transform: rotate(15deg);
+			}
+			
+			.thrLove3 {
+				right: 30px;
+				top: 30px;
+				background: url(img/tidai.jpg) no-repeat;
+				background-size: 100px 120px;
+				transform: rotate(-15deg);
+			}
+			
+			.fourLove1 {
+				right: 30px;
+				top: 30px;
+				background: url(img/tidai.jpg) no-repeat;
+				background-size: 100px 120px;
+				transform: rotate(10deg);
+			}
+			
+			.fourLove2 {
+				left: 80px;
+				top: 30px;
+				background: url(img/tidai.jpg) no-repeat;
+				background-size: 100px 120px;
+				transform: rotate(-15deg);
+			}
+			
+			.fourLove3 {
+				left: 40px;
+				top: 170px;
+				background: url(img/tidai.jpg) no-repeat;
+				background-size: 100px 120px;
+				transform: rotate(15deg);
+			}
+			
+			.fourLove4 {
+				right: 70px;
+				top: 170px;
+				background: url(img/tidai.jpg) no-repeat;
+				background-size: 100px 120px;
+				transform: rotate(-15deg);
+			}
+			
+			.threeFont {
+				width: 70%;
+				text-align: center;
+				margin-top: 70px;
+				margin-left: 30px;
+			}
+			
+			@font-face {
+				font-family: myDFont;
+				src: url('fonts/f3.ttf');
+			}
+			
+			.threeFont p {
+				color: #e0276d;
+				font-size: 18px;
+				font-family: myDFont;
+				/*text-shadow: 5px 5px 3px white;*/
+			}
+			
+			@keyframes fontReturn {
+				from {
+					font-size: 18px;
+				}
+				to {
+					font-size: 20px;
+				}
+			}
+			
+			@keyframes xxReturn {
+				from {
+					transform: rotate(0deg);
+				}
+				to {
+					transform: rotate(360deg);
+				}
+			}
+			
+			.threeTop {
+				margin-left: 10%;
+				width: 80%;
+				height: 250px;
+			}
+			
+			.threeLun {
+				width: 100%;
+				height: 250px;
+			}
+			
+			.threeBottom {
+				text-align: center;
+				margin-top: 60px;
+			}
+			
+			.threeBottom p {
+				color: #e0276d;
+				font-size: 18px;
+				font-family: myDFont;
+			}
+			
+			.fourXX {
+				margin-top: 320px;
+				text-align: center;
+			}
+			
+			.fourXX p {
+				color: #e0276d;
+				font-size: 18px;
+				font-family: myDFont;
+			}
+			.fifFont{
+				margin-left: 60px;
+				margin-top: 270px;
+				text-align: center;
+			}
+			.fifFont p{
+				color: #e0276d;
+				font-size: 18px;
+				font-family: myDFont;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div>
+			<img id="audio" src="img/music.png" width="50px" height="50px" />
+			<audio id="myAudio" src="mp3/xiaoxingyun.mp3" controls="controls"></audio>
+			<div id="one" class="one"></div>
+			<div id="two" class="two">
+				<div id="twoLove1" class="love love1"></div>
+				<div id="twoLove2" class="love love2"></div>
+				<div id="twoLove3" class="love love3"></div>
+			</div>
+			<div id="three" class="three">
+				<div class="threeTop mui-slider">
+					<div class="mui-slider-group mui-slider-loop">
+						<!--支持循环，需要重复图片节点-->
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#"><img class="threeLun" src="img/tidai.jpg" /></a>
+						</div>
+						<div class="mui-slider-item">
+							<a href="#"><img class="threeLun" src="img/tidai.jpg" /></a>
+						</div>
+						<div class="mui-slider-item">
+							<a href="#"><img class="threeLun" src="img/tidai.jpg" /></a>
+						</div>
+						<div class="mui-slider-item">
+							<a href="#"><img class="threeLun" src="img/tidai.jpg" /></a>
+						</div>
+						<div class="mui-slider-item">
+							<a href="#"><img class="threeLun" src="img/tidai.jpg" /></a>
+						</div>
+						<div class="mui-slider-item">
+							<a href="#"><img class="threeLun" src="img/tidai.jpg" /></a>
+						</div>
+						<div class="mui-slider-item">
+							<a href="#"><img class="threeLun" src="img/tidai.jpg" /></a>
+						</div>
+						<div class="mui-slider-item">
+							<a href="#"><img class="threeLun" src="img/tidai.jpg" /></a>
+						</div>
+						<div class="mui-slider-item">
+							<a href="#"><img class="threeLun" src="img/tidai.jpg" /></a>
+						</div>
+						<div class="mui-slider-item">
+							<a href="#"><img class="threeLun" src="img/tidai.jpg" /></a>
+						</div>
+						<div class="mui-slider-item">
+							<a href="#"><img class="threeLun" src="img/tidai.jpg" /></a>
+						</div>
+						<!--支持循环，需要重复图片节点-->
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#"><img class="threeLun" src="img/heself/psbe1.jpg" /></a>
+						</div>
+					</div>
+				</div>
+				<div class='threeBottom'>
+					<p>啦啦啦啦啦,<br/>啦啦啦啦啦！</p>
+				</div>
+			</div>
+			<div id="four" class="four">
+				<div id="fourLove1" class="love fourLove1"></div>
+				<div id="fourLove2" class="love fourLove2"></div>
+				<div id="fourLove3" class="love fourLove3"></div>
+				<div id="fourLove4" class="love fourLove4"></div>
+				<div class="fourXX">
+					<p>啦啦啦啦啦，<br/>啦啦啦啦啦，<br/>啦啦啦啦啦！</p>
+				</div>
+			</div>
+			<div id="fif" class="fif">
+				<div id="threeLove1" class="love thrLove1"></div>
+				<div id="threeLove2" class="love thrLove2"></div>
+				<div id="threeLove3" class="love thrLove3"></div>
+				<div class="fifFont">
+					<p>啦啦啦啦啦，<br/>啦啦啦啦啦！</p>
+				</div>
+			</div>
+			<div id="six" class="six">
+				<div class="threeFont">
+					<p id="font">啦啦啦啦啦啦<br/>啦啦啦啦啦~~</p>
+				</div>
+			</div>
+		</div>
+		<script>
+				//获得slider插件对象
+			var gallery = mui('.mui-slider');
+				gallery.slider({
+				interval: 2500 //自动轮播周期，若为0则不自动播放，默认为0；
+			});
+			var twoLove1 = document.getElementById('twoLove1');
+			var twoLove2 = document.getElementById('twoLove2');
+			var twoLove3 = document.getElementById('twoLove3');
+			var threeLove1 = document.getElementById('threeLove1');
+			var threeLove2 = document.getElementById('threeLove2');
+			var threeLove3 = document.getElementById('threeLove3');
+			var fourLove1 = document.getElementById('fourLove1');
+			var fourLove2 = document.getElementById('fourLove2');
+			var fourLove3 = document.getElementById('fourLove3');
+			var fourLove4 = document.getElementById('fourLove4');
+
+			var font = document.getElementById('font');
+			font.style.animation = "2s linear infinite fontReturn";
+			var myAudio = document.getElementById('myAudio');
+			var myImgAudio = document.getElementById("audio");
+			myAudio.style.display = 'none';
+			myAudio.play();
+			var audioBoolean = true;
+			myImgAudio.style.animation = "3s linear infinite CDturn";
+			myImgAudio.addEventListener('click', function() {
+				if(audioBoolean) {
+					myAudio.pause();
+					myImgAudio.style.animation = "";
+					audioBoolean = false;
+				} else {
+					myAudio.play();
+					myImgAudio.style.animation = "3s linear infinite CDturn";
+					audioBoolean = true;
+				}
+			});
+
+			var one = document.getElementById("one");
+			var two = document.getElementById("two");
+			var three = document.getElementById("three");
+			var four = document.getElementById("four");
+			var fif = document.getElementById("fif");
+			var six = document.getElementById("six");
+		    var hei = window.innerHeight > 0 ? window.innerHeight : document.documentElement.clientHeight;
+			// var hei = document.body.scrollHeight;
+			one.style.height = hei + "px";
+			one.style.backgroundSize = 100 + "%" + hei + "px";
+			two.style.display = 'none';
+			two.style.opacity = '0.1';
+			three.style.display = 'none';
+			three.style.opacity = '0.1';
+			four.style.display = 'none';
+			four.style.opacity = '0.1';
+			fif.style.display = 'none';
+			fif.style.opacity = '0.1';
+			six.style.display = 'none';
+			six.style.opacity = '0.1';
+			two.style.height = hei + "px";
+			//			two.style.height = document.body.scrollHeight + "px";
+			two.style.backgroundSize = 100 + "%" + hei + "px";
+			//			two.style.bottom = 0 + "px";
+			three.style.height = hei + "px";
+			three.style.backgroundSize = 100 + "%" + hei + "px";
+			four.style.height = hei + "px";
+			four.style.backgroundSize = 100 + "%" + hei + "px";
+			fif.style.height = hei + "px";
+			fif.style.backgroundSize = 100 + "%" + hei + "px";
+			six.style.height = hei + "px";
+			six.style.backgroundSize = 100 + "%" + hei + "px";
+			one.addEventListener("swipeup", function() {
+				//				document.body.scrollTop = hei;
+				//					alert("上滑");
+				//切换到下一个页面
+				one.style.display = 'none';
+				one.style.opacity = '0.1';
+				two.style.transition = 'opacity 1s ease-in';
+				two.style.display = '';
+				twoLove1.style.transition = 'right 1s ease-out .2s';
+				twoLove2.style.transition = 'left 1s ease-out .2s';
+				twoLove3.style.transition = 'right 1s ease-out .2s';
+				setTimeout(function() {
+					two.style.opacity = '1';
+					twoLove1.style.right = '50px';
+					twoLove2.style.left = '30px';
+					twoLove3.style.right = '50px';
+				}, 300);
+
+			});
+			one.addEventListener("swipedown", function() {
+
+				//					alert("下滑");
+				mui.alert('我是有顶线的 ...', '提示', '确定', null, 'div');
+
+			});
+
+			two.addEventListener("swipeup", function() {
+				//				alert("上滑");
+				three.style.display = '';
+				two.style.opacity = '0.1';
+				two.style.display = 'none';
+				three.style.transition = 'opacity 1s ease-in';
+
+				setTimeout(function() {
+					three.style.opacity = '1';
+					twoLove1.style.right = '0px';
+					twoLove2.style.left = '0px';
+					twoLove3.style.right = '0px';
+					//					threeLove1.style.top = '80px';
+					//					threeLove2.style.bottom = '60px';
+					//					threeLove3.style.top = '50px';
+				}, 300);
+
+			});
+			two.addEventListener("swipedown", function() {
+				//				document.body.scrollTop = 0;
+				//				alert("下滑");
+				one.style.display = '';
+				two.style.opacity = '0.1';
+				two.style.display = 'none';
+				one.style.transition = 'opacity 1s ease-in';
+				setTimeout(function() {
+					one.style.opacity = '1';
+					twoLove1.style.right = '0px';
+					twoLove2.style.left = '0px';
+					twoLove3.style.right = '0px';
+				}, 300);
+			});
+			three.addEventListener("swipeup", function() {
+				four.style.display = '';
+				three.style.opacity = '0.1';
+				three.style.display = 'none';
+				four.style.transition = 'opacity 1s ease-in';
+				fourLove1.style.animation = ' 1s ease-out .2s xxReturn';
+				fourLove2.style.animation = ' 1s ease-out .2s xxReturn';
+				fourLove3.style.animation = ' 1s ease-out .2s xxReturn';
+				fourLove4.style.animation = ' 1s ease-out .2s xxReturn';
+				setTimeout(function() {
+					four.style.opacity = '1';
+				}, 300);
+			});
+			three.addEventListener("swipedown", function() {
+				two.style.display = '';
+				three.style.opacity = '0.1';
+				three.style.display = 'none';
+				two.style.transition = 'opacity 1s ease-in';
+				twoLove1.style.transition = 'right 1s ease-out .2s';
+				twoLove2.style.transition = 'left 1s ease-out .2s';
+				twoLove3.style.transition = 'right 1s ease-out .2s';
+				setTimeout(function() {
+					two.style.opacity = '1';
+					twoLove1.style.right = '0px';
+					twoLove2.style.left = '0px';
+					twoLove3.style.right = '0px';
+					//					threeLove1.style.top = '0px';
+					//					threeLove2.style.bottom = '0px';
+					//					threeLove3.style.top = '0px';
+					twoLove1.style.right = '50px';
+					twoLove2.style.left = '30px';
+					twoLove3.style.right = '50px';
+				}, 300);
+			});
+			four.addEventListener("swipeup", function() {
+				fif.style.display = '';
+				four.style.opacity = '0.1';
+				four.style.display = 'none';
+				fif.style.transition = 'opacity 1s ease-in';
+				three.style.transition = 'opacity 1s ease-in';
+				threeLove1.style.transition = 'top 1s ease-out .2s';
+				threeLove2.style.transition = 'bottom 1s ease-out .2s';
+				threeLove3.style.transition = 'top 1s ease-out .2s';
+				setTimeout(function() {
+					fif.style.opacity = '1';
+					threeLove1.style.top = '80px';
+					threeLove2.style.bottom = '60px';
+					threeLove3.style.top = '50px';
+				}, 300);
+			});
+			four.addEventListener("swipedown", function() {
+				three.style.display = '';
+				four.style.opacity = '0.1';
+				four.style.display = 'none';
+				three.style.transition = 'opacity 1s ease-in';
+				setTimeout(function() {
+					three.style.opacity = '1';
+					//					twoLove1.style.right = '0px';
+					//					twoLove2.style.left = '0px';
+					//					twoLove3.style.right = '0px';
+				}, 300);
+			});
+			fif.addEventListener("swipeup", function() {
+				six.style.display = '';
+				fif.style.opacity = '0.1';
+				fif.style.display = 'none';
+				six.style.transition = 'opacity 1s ease-in';
+				setTimeout(function() {
+					six.style.opacity = '1';
+					threeLove1.style.top = '0px';
+					threeLove2.style.bottom = '0px';
+					threeLove3.style.top = '0px';
+				}, 300);
+			});
+			fif.addEventListener("swipedown", function() {
+				four.style.display = '';
+				fif.style.opacity = '0.1';
+				fif.style.display = 'none';
+				four.style.transition = 'opacity 1s ease-in';
+				fourLove1.style.animation = ' 1s ease-out .2s xxReturn xxReturn';
+				fourLove2.style.animation = ' 1s ease-out .2s xxReturn';
+				fourLove3.style.animation = ' 1s ease-out .2s xxReturn';
+				fourLove4.style.animation = ' 1s ease-out .2s xxReturn';
+				setTimeout(function() {
+					four.style.opacity = '1';
+					threeLove1.style.top = '0px';
+					threeLove2.style.bottom = '0px';
+					threeLove3.style.top = '0px';
+				}, 300);
+			});
+			six.addEventListener("swipeup", function() {
+				//				alert("上滑");
+				mui.alert('我是有底线的...', '提示', '确定', null, 'div');
+			});
+			six.addEventListener("swipedown", function() {
+				//				alert("下滑");
+				fif.style.display = '';
+				six.style.opacity = '0.1';
+				six.style.display = 'none';
+				fif.style.transition = 'opacity 1s ease-in';
+				threeLove1.style.transition = 'top 1s ease-out .2s';
+				threeLove2.style.transition = 'bottom 1s ease-out .2s';
+				threeLove3.style.transition = 'top 1s ease-out .2s';
+				setTimeout(function() {
+					fif.style.opacity = '1';
+					threeLove1.style.top = '80px';
+					threeLove2.style.bottom = '60px';
+					threeLove3.style.top = '50px';
+				}, 300);
+			});
+		
+		</script>
+	</body>
+
+</html>
